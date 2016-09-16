@@ -177,19 +177,11 @@ if(!anonymousMode() && !httpAuthEnabled()) { ?>
                     </a>
                 </div>
 
-                <h2>Jappix.org</h2>
+                <h2>Jappix.com</h2>
                 <div class="tabulate">
-                    <a href="https://jappix.org/">
+                    <a href="https://jappix.com/">
                         <span class="name">Jappix Download</span>
                         <span class="desc"><?php _e("Get Jappix, get support."); ?></span>
-                    </a>
-                    <a href="https://business.jappix.org/">
-                        <span class="name">Jappix Business</span>
-                        <span class="desc"><?php _e("Jappix for your company."); ?></span>
-                    </a>
-                    <a href="https://network.jappix.org/">
-                        <span class="name">Jappix Network</span>
-                        <span class="desc"><?php _e("Find a public Jappix node."); ?></span>
                     </a>
                     <a href="https://github.com/jappix/jappix">
                         <span class="name">Jappix (GitHub)</span>

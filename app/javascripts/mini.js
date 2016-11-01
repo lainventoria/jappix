@@ -44,6 +44,7 @@ var MINI_PASSWORDS              = [];
 var MINI_PRIORITY               = 1;
 var MINI_RESOURCE               = JAPPIX_RESOURCE + ' Mini';
 var MINI_ERROR_LINK             = 'https://mini.jappix.com/issues';
+var MINI_DEFAULT_MESSAGE        = 'Wait a moment please';
 
 
 // Bundle
@@ -2964,6 +2965,7 @@ var JappixMini = (function () {
             if(show_pane !== false) {
                 jQuery(document).oneTime(10, function() {
                     self.switchPane('chat-' + hash, hash);
+                    self.displayMessage(type, 'Disculpe, en el momento nuestros operadores están ocupados.  Para realizar una consulta puede hacerlo a consulta@mideuda.com. También puede recorrer el instructivo: http://mideuda.com/faq', xid, nickname, hash, 'ahora', 1477933808, 'user-message');
                 });
             }
 
@@ -3287,6 +3289,17 @@ var JappixMini = (function () {
 
                     // Open the current chat
                     self.chat('chat', chat_xid, chat_nick, chat_hash);
+                    jQuery(document).oneTime(10, function() {
+                      self.displayMessage('chat',
+                        MINI_DEFAULT_MESSAGE,
+                        chat_xid,
+                        chat_nick,
+                        chat_hash,
+                        '',
+                        1477933808,
+                        'user-message');
+                    });
+
                 }
 
                 catch(e) {}
